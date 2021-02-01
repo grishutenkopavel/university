@@ -1,0 +1,56 @@
+% "Лабораторная работа 2"
+
+\documentclass[a4paper,12pt]{article} % тип документа
+
+% report, book
+
+%  Русский язык
+
+\usepackage[T2A]{fontenc}			% кодировка
+\usepackage[utf8]{inputenc}			% кодировка исходного текста
+\usepackage[english,russian]{babel}	% локализация и переносы
+
+
+% Математика
+\usepackage{amsmath,amsfonts,amssymb,amsthm,mathtools} 
+
+
+\usepackage{wasysym}
+
+\usepackage{hyperref}
+
+%Заговолок
+\author{кафедра КТиЭО}
+\title{Работа с текстом в \LaTeX{}}
+\date{\today}
+
+
+\begin{document} % начало документа
+\section{Команды, которые используются для форматирования технического текста.}
+\begin{itemize}
+    \item Межстрочный интервал. $\backslash$linespread\{интервал\}
+    \item Полуторный интервал. $\backslash$onehalfspacing
+    \item Вставка неразрывного пробела. \~ \
+    \item Пробел шириной 1em.  $\backslash$quad
+    \item Пробел шириной 2em.  $\backslash$qquad
+    \item Растяжимый горизонтальный пробел. $\backslash$hfill
+    \item Вставка текущей даты. $\backslash$today
+    \item Запретить переносы в слове. $\backslash$mbox\{Непереносимость\}
+    \item Задать переносы в слове. $\backslash$hyphenation\{Непереносимость Син$\backslash$-хро$\backslash$-фа$\backslash$-зо$\backslash$-трон\}
+    \item Указать стиль страницы. $\backslash$pagestyle\{Стиль\}
+    \item Добавление другого документа. $\backslash$include\{файл\}
+
+    \item Переход на новую строку. $\backslash$newline или $\backslash$$\backslash$
+    \item Переход на новую страницу. $\backslash$newpage
+    \item Выравнивание по центру. $\backslash$begin\{center\} Текст $\backslash$end\{center\}
+
+    \item Выравнивание по правому краю. $\backslash$begin\{flushright\} Текст $\backslash$end\{flushright\}
+    \item Выравнивание по левому краю. $\backslash$begin\{flushleft\} Текст $\backslash$end\{flushleft\}
+    \item Создать сноску. $\backslash$footnote\{сноска\}
+    \item Задать размер текста. $\backslash$tiny $\backslash$scriptsize $\backslash$footnotesize $\backslash$small $\backslash$normalsize $\backslash$large $\backslash$Large $\backslash$LARGE $\backslash$huge $\backslash$HUGE
+    \item Гиперссылка. $\backslash$url\{ссылка\}
+    \item Нумерованный список. $\backslash$begin\{enumerate\} $\backslash$item Текст $\backslash$end\{enumerate\}
+    \item Маркированный список. $\backslash$begin\{itemize\} $\backslash$item Текст $\backslash$end\{itemize\}
+\end{itemize}
+
+\end{document} % конец документа
