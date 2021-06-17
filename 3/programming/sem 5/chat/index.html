@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <script>
+            const socket = new WebSocket('ws://localhost:8888/websocket');
+
+            socket.onopen = function() {
+                console.log("is open")
+            };
+            
+            let btn = document.createElement("BUTTON");   // Create a <button> element
+            let input = document.createElement('input');
+            btn.innerHTML = "CLICK ME";
+            
+            document.body.appendChild(input);
+            document.body.appendChild(btn);
+
+            btn.addEventListener('click', function() {
+                console.log(input.value);
+                socket.send(input.value);
+                console.log("was send");
+            });
+        </script>
+        <div id="messages">
+            <h1>Печать сообщений:</h1>
+            <script>
+            socket.onmessage = function (evt) {
+                mesFromServer = evt.data;
+                textField = document.getElementById('messages');
+                pTag = document.createElement('p');
+                pTag.innerHTML = evt.data;
+                textField.appendChild(pTag);
+            };
+            </script>
+        </div>
+    </body>
+</html>
