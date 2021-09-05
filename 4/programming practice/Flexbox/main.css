@@ -1,0 +1,82 @@
+.front-page {
+    display: flex;
+    flex-flow: column wrap;
+    
+    height: 100%;
+}
+nav {
+    display: flex;
+    flex-direction: row;
+    background-color: fuchsia;
+    text-indent: 25px;
+}
+.large-banner {
+    background-color: blue;
+    text-align: center;
+    margin-top: 1rem;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    margin-left: 8%;
+    width: 84%;
+}
+.main-content {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-evenly;
+    margin-left: 5%;
+    width: 90%;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+.sidebar {
+    background-color: seagreen;
+    width: 20%;
+}
+.content {
+    display: flex;
+    flex-flow: column wrap;
+    text-align: center;
+    background-color: salmon;
+    flex-basis: 70%;
+}
+.full-content-box-page {
+    display: flex;
+    flex-flow: row wrap;
+    padding-top: 3%;
+    padding-bottom: 3%;
+}
+.content-box {
+    padding-top: 7%;
+    padding-bottom: 7%;
+    width: 33%;
+    height: 33%;
+}
+.content-page-with-banner {
+    display: flex;
+    flex-flow: row wrap;
+    padding-top: 12%;
+    padding-bottom: 12%;
+}
+.content-banner-box {
+    flex-basis: 63%;
+    background-color: seagreen;
+}
+.page-counter {
+    margin-top: 1%;
+    margin-bottom: 2%;
+}
+.additional-content{
+    background-color: royalblue;
+    margin-left: 5%;
+    width: 90%;
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+}
+footer {
+    background-color: fuchsia;
+    text-align: right;
+    margin-top: 1rem;
+    bottom: 0;
+    width: 100%;
+    padding-bottom: 2%;
+}
