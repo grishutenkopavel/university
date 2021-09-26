@@ -34,16 +34,20 @@ h3 {
     letter-spacing: 0.025em;
     color: #921026;
 }
-.button-get-recipe{
+button{
     width: 105px;
     height: 28px;
     border: 1px solid #c2c2c2;
+    background-color: #ffffff;
     font-family: 'Josefin Sans';
     font-size: 12px;
     line-height: 1.2;
     font-weight: 300;
     letter-spacing: 0.025em;
     color: #000000;
+}
+.button-get-recipe {
+    background-color: #f8f8f8;
 }
 .recommended-recipe-text {
     font-family: 'Josefin Sans';
@@ -100,7 +104,7 @@ h3 {
 .cake-recipe {
     display: flex;
     flex-direction: row;
-    justify-content: flex-end;
+    justify-content:space-around;
     width: 1120px;
     height: 438px;
     background-color: #ffffff;
@@ -109,6 +113,17 @@ h3 {
     background-size: cover;
     background-attachment: local;
     background-repeat: no-repeat;
+}
+.barrier {
+    padding-left: 560px;
+}
+.scroller {
+  height: 320px;
+  overflow-x: scroll;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  scroll-snap-type: x mandatory;
 }
 .recipe-text {
     width: 50%;
