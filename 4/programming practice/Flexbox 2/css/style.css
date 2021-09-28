@@ -25,6 +25,15 @@
 .img-lemon-on-recommended-recipe {
     width: 252px;
     height: 105px;
+    padding: 50px 0px 0px 90px;
+}
+h2 {
+    font-family: 'Playfair Display';
+    font-size: 32px;
+    line-height: 1.2;
+    font-weight: 900;
+    letter-spacing: 0.075em;
+    color: #055555;
 }
 h3 {
     font-family: 'Playfair Display';
@@ -33,6 +42,30 @@ h3 {
     font-weight: 400;
     letter-spacing: 0.025em;
     color: #921026;
+    padding-left: 90px;
+}
+.recommended-recipe-text{
+    padding-left: 90px;
+}
+.dots{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    margin-right: 20px;
+}
+.dot{
+    width: 8px;
+    height: 8px;
+    background-image: url(../img/ellipse_2_copy_4684.png);
+    background-color: #dddddd;
+    margin-right: 7px;
+}
+.current-dot {
+    width: 8px;
+    height: 8px;
+    background-image: url(../img/ellipse_2_copy_2_4685.png);
+    background-color: #ffffff;
+    margin-right: 7px;
 }
 button{
     width: 105px;
@@ -48,6 +81,7 @@ button{
 }
 .button-get-recipe {
     background-color: #f8f8f8;
+    margin-top: 20px;
 }
 .recommended-recipe-text {
     font-family: 'Josefin Sans';
@@ -124,8 +158,75 @@ button{
   flex-direction: column;
   box-sizing: border-box;
   scroll-snap-type: x mandatory;
+  
 }
 .recipe-text {
     width: 50%;
+}
+.complexity-info{
+    display: flex;
+    justify-content: space-between;
+    margin-right: 40px;
+}
+.clock-2{
+    align-self: center;
+}
+.time-complexity-info {
+    display: flex;
+    align-self: baseline;
+}
+.time-info{
+    align-self: flex-end;
+    font-family: 'Open Sans';
+    font-size: 16px;
+    line-height: 1.2;
+    font-weight: 300;
+    letter-spacing: 0.025em;
+    color: #555555;
+}
+.cols{
+    display: flex;
+    align-self: flex-end;
+}
+.col-1{
+    align-self: baseline;
+    width: 5px;
+    height: 11px;
+    margin-left: 10px;
+    background-color: #555555;
+}
+.col-2{
+    align-self: baseline;
+    width: 5px;
+    height: 15px;
+    margin-left: 2px;
+    background-color: #555555;
+}
+.col-3{
+    align-self: baseline;
+    width: 5px;
+    height: 19px;
+    margin-left: 2px;
+    background-color: #555555;
+}
+.col-4{
+    align-self: baseline;
+    width: 5px;
+    margin-left: 2px;
+    height: 24px;
+    border: 0.3px solid #555555;
+}
+.easy{
+    margin-left: 10px;
+    align-self: flex-end;
+    font-family: 'Josefin Sans';
+    font-size: 18px;
+    line-height: 1.2;
+    font-weight: 300;
+    letter-spacing: 0.025em;
+    color: #555555;
+}
+.main-recipe-text{
+    padding-right: 20px;
 }
 }
