@@ -4,7 +4,7 @@ import timeit
 from concurrent.futures import as_completed
 from concurrent.futures import ThreadPoolExecutor
 from functools import partial
-
+from joblib import Parallel, delayed
 from cint import c_integrate
 
 timeitSetup = """
@@ -55,10 +55,18 @@ def integrate_async(f, a, b, n_jobs=8, n_iter=10**6):
 def c_integrate_async(a, b, n_jobs=8, n_iter=10**6):
 
     with ThreadPoolExecutor(max_workers=n_jobs) as executor:
-        spawn = partial(executor.submit, c_integrate(0, 1), countOfSteps=n_iter // n_jobs)
+        spawn = partial(executor.submit, c_integrate, countOfSteps=n_iter // n_jobs)
         step = (b - a) / n_jobs
         fs = [spawn(a + i * step, a + (i + 1) * step) for i in range(n_jobs)]
         return sum(res.result() for res in as_completed(fs))
+
+
+def integrate_async_parallel(f, a, b, n_jobs=8, n_iter=10**6):
+
+        step = (b - a) / n_jobs
+        fs = Parallel(n_jobs=n_jobs)(delayed(integrate)(f, a + i * step, a + (i + 1) * step) for i in range(n_jobs))
+        return sum(x for x in fs)
+
 
 if __name__ == '__main__':
     
@@ -73,6 +81,18 @@ if __name__ == '__main__':
 
     # Cpython 
     print(timeit.timeit(stmt='c_integrate(0, 1)', setup=timeitSetup, number=100)) # gil and nogil ~0.47 sec;   
-
+    
+    # Cpython multithreading
+    print(timeit.timeit(stmt='c_integrate_async(0, 1, n_jobs=2)', setup=timeitSetup, number=100)) # ~ 0.14 sec
+    print(timeit.timeit(stmt='c_integrate_async(0, 1, n_jobs=4)', setup=timeitSetup, number=100)) # ~ 0.07 sec
+    print(timeit.timeit(stmt='c_integrate_async(0, 1, n_jobs=6)', setup=timeitSetup, number=100)) # ~ 0.05 sec
+    print(timeit.timeit(stmt='c_integrate_async(0, 1, n_jobs=8)', setup=timeitSetup, number=100)) # ~ 0.05 sec
+    
+    # Parallel
+    print(timeit.timeit(stmt='integrate_async_parallel(math.cos, 0, 1, n_jobs=2)', globals=globals(), number=100)) # ~ 5.51 sec
+    print(timeit.timeit(stmt='integrate_async_parallel(math.cos, 0, 1, n_jobs=4)', globals=globals(), number=100)) # ~ 3.2 sec
+    print(timeit.timeit(stmt='integrate_async_parallel(math.cos, 0, 1, n_jobs=6)', globals=globals(), number=100)) # ~ 3.2 sec
+    print(timeit.timeit(stmt='integrate_async_parallel(math.cos, 0, 1, n_jobs=8)', globals=globals(), number=100)) # ~ 2.8 sec
+    
     # Result
     print( integrate(math.cos, 0, 1) )
