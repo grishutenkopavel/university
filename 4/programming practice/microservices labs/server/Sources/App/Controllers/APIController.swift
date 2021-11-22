@@ -18,8 +18,11 @@ struct APIController: RouteCollection {
         api.group("json") { json in
             json.get(use: show)
             json.post(use: show)
-
         }
+      api.post("hypotenuse") { req -> String in
+        let hypotenuseAppRequest = HypotenuseAppRequest(request: req)
+        return returnJsonMyStruct(result: hypotenuseAppRequest.result)
+      }
     }
 
     func index(req: Request) throws -> String {
@@ -27,15 +30,20 @@ struct APIController: RouteCollection {
     }
     
     func show(req: Request) throws -> String {
-        let encoder = JSONEncoder()
-        encoder.outputFormatting = .prettyPrinted
-        
-        var res = MyStructResponse()
-        res.seccess = "seccess"
-        res.result  = "hello_world_app"
-        res.version = "1.0"
-        
-        let data = try encoder.encode(res)
-        return String(data: data, encoding: .utf8)!
+      return returnJsonMyStruct(result: "hello_world_app")
+    }
+  
+  private func returnJsonMyStruct(result: String) -> String {
+      let encoder = JSONEncoder()
+      encoder.outputFormatting = .prettyPrinted
+    
+      var res = MyStructResponse()
+      res.seccess = "seccess"
+      res.result  = result
+      res.version = "1.0"
+    
+      let data = try? encoder.encode(res)
+      guard let data = data else { return "None"}
+      return String(data: data, encoding: .utf8)!
     }
 }
