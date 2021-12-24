@@ -1,0 +1,44 @@
+<HTML>
+<HEAD>
+<TITLE>
+CA Report Template Builder - Untitled Document
+</TITLE>
+</HEAD>
+<BODY ONUNLOAD="close_winrep();">
+<SCRIPT>
+var win = null;
+function close_winrep()
+{
+ if (win && !win.closed)
+ {
+  win.close();
+ }
+}
+function show_rep(rep_pict)
+{
+ if (win && !win.closed)
+ {
+  win.frames[1].location.replace(rep_pict + "_2.htm");
+  win.focus();
+  return;
+ }
+ win = window.open(rep_pict + ".htm", "RTBViewReportPicture","titlebar=no,scrollbars=yes,top=0,left=0,resizable=yes,height=350,width=400");
+}
+</SCRIPT>
+<P><IMG src='images/diagram6.jpeg' usemap ='#mapdiagram'>
+<MAP name='mapdiagram'>
+<AREA HREF="JAVASCRIPT:var rep='PictureTabLkd91'; show_rep(rep);" alt='Деятельность компании ' shape='rect' coords='277,113,472,159'>
+<AREA HREF="JAVASCRIPT:var rep='PictureTabLkd92'; show_rep(rep);" alt='Исследование рынка' shape='rect' coords='175,352,337,372'>
+<AREA HREF="JAVASCRIPT:var rep='PictureTabLkd93'; show_rep(rep);" alt='Отгрузка и получение' shape='rect' coords='550,209,724,273'>
+<AREA HREF="JAVASCRIPT:var rep='PictureTabLkd94'; show_rep(rep);" alt='Оформление заказов' shape='rect' coords='175,327,337,347'>
+<AREA HREF="JAVASCRIPT:var rep='PictureTabLkd95'; show_rep(rep);" alt='Планирование производства' shape='rect' coords='362,283,540,322'>
+<AREA HREF="JAVASCRIPT:var rep='PictureTabLkd96'; show_rep(rep);" alt='Предоставление  информации  о ценах ' shape='rect' coords='175,283,337,322'>
+<AREA HREF="JAVASCRIPT:var rep='PictureTabLkd97'; show_rep(rep);" alt='Продажи и маркетинг' shape='rect' coords='160,209,337,273'>
+<AREA HREF="JAVASCRIPT:var rep='PictureTabLkd98'; show_rep(rep);" alt='Производство продукта ' shape='rect' coords='347,209,540,273'>
+<AREA HREF="JAVASCRIPT:var rep='PictureTabLkd99'; show_rep(rep);" alt='Разработать конфигурацию' shape='rect' coords='25,209,150,273'>
+<AREA HREF="JAVASCRIPT:var rep='PictureTabLkd100'; show_rep(rep);" alt='Сборка продукта' shape='rect' coords='362,327,540,347'>
+</MAP>
+</IMG>
+</P>
+</BODY>
+</HTML>

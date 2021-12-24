@@ -1,0 +1,48 @@
+<HTML>
+<HEAD>
+<TITLE>
+CA Report Template Builder - Untitled Document
+</TITLE>
+</HEAD>
+<BODY ONUNLOAD="close_winrep();">
+<SCRIPT>
+var win = null;
+function close_winrep()
+{
+ if (win && !win.closed)
+ {
+  win.close();
+ }
+}
+function show_rep(rep_pict)
+{
+ if (win && !win.closed)
+ {
+  win.frames[1].location.replace(rep_pict + "_2.htm");
+  win.focus();
+  return;
+ }
+ win = window.open(rep_pict + ".htm", "RTBViewReportPicture","titlebar=no,scrollbars=yes,top=0,left=0,resizable=yes,height=350,width=400");
+}
+</SCRIPT>
+<P><IMG src='images/diagram4.jpeg' usemap ='#mapdiagram'>
+<MAP name='mapdiagram'>
+<AREA HREF="JAVASCRIPT:var rep='PictureTabLkd60'; show_rep(rep);" alt='Планирование производства' shape='rect' coords='155,213,335,298'>
+<AREA HREF="JAVASCRIPT:var rep='PictureTabLkd61'; show_rep(rep);" alt='Сборка продукта' shape='rect' coords='630,403,805,488'>
+<AREA HREF="JAVASCRIPT:var rep='PictureTabLkd62'; show_rep(rep);" alt='Заказ поставщику' shape='rect' coords='935,218,1065,238'>
+<AREA HREF="JAVASCRIPT:var rep='PictureTabLkd63'; show_rep(rep);" alt='Заказы клиентов' shape='rect' coords='49,103,115,142'>
+<AREA HREF="JAVASCRIPT:var rep='PictureTabLkd64'; show_rep(rep);" alt='Заказы на изготовление' shape='rect' coords='491,287,589,326'>
+<AREA HREF="JAVASCRIPT:var rep='PictureTabLkd65'; show_rep(rep);" alt='Информация от поставщика' shape='rect' coords='289,133,496,153'>
+<AREA HREF="JAVASCRIPT:var rep='PictureTabLkd66'; show_rep(rep);" alt='Компоненты' shape='rect' coords='290,448,381,468'>
+<AREA HREF="JAVASCRIPT:var rep='PictureTabLkd67'; show_rep(rep);" alt='Неисправные компоненты' shape='rect' coords='999,461,1100,500'>
+<AREA HREF="JAVASCRIPT:var rep='PictureTabLkd68'; show_rep(rep);" alt='Персонал производственного отдела' shape='rect' coords='249,634,466,673'>
+<AREA HREF="JAVASCRIPT:var rep='PictureTabLkd69'; show_rep(rep);" alt='Планировщик производства' shape='rect' coords='123,404,225,443'>
+<AREA HREF="JAVASCRIPT:var rep='PictureTabLkd70'; show_rep(rep);" alt='Прогноз продаж' shape='rect' coords='161,161,279,181'>
+<AREA HREF="JAVASCRIPT:var rep='PictureTabLkd71'; show_rep(rep);" alt='Результаты сборки и тестирования' shape='rect' coords='947,359,1100,398'>
+<AREA HREF="JAVASCRIPT:var rep='PictureTabLkd72'; show_rep(rep);" alt='Собранные компьютеры' shape='rect' coords='1006,417,1100,456'>
+<AREA HREF="JAVASCRIPT:var rep='PictureTabLkd73'; show_rep(rep);" alt='Стандарты на продукцию' shape='rect' coords='607,140,793,160'>
+</MAP>
+</IMG>
+</P>
+</BODY>
+</HTML>

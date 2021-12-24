@@ -1,0 +1,47 @@
+<HTML>
+<HEAD>
+<TITLE>
+CA Report Template Builder - Untitled Document
+</TITLE>
+</HEAD>
+<BODY ONUNLOAD="close_winrep();">
+<SCRIPT>
+var win = null;
+function close_winrep()
+{
+ if (win && !win.closed)
+ {
+  win.close();
+ }
+}
+function show_rep(rep_pict)
+{
+ if (win && !win.closed)
+ {
+  win.frames[1].location.replace(rep_pict + "_2.htm");
+  win.focus();
+  return;
+ }
+ win = window.open(rep_pict + ".htm", "RTBViewReportPicture","titlebar=no,scrollbars=yes,top=0,left=0,resizable=yes,height=350,width=400");
+}
+</SCRIPT>
+<P><IMG src='images/diagram2.jpeg' usemap ='#mapdiagram'>
+<MAP name='mapdiagram'>
+<AREA HREF="JAVASCRIPT:var rep='PictureTabLkd31'; show_rep(rep);" alt='Исследование рынка' shape='rect' coords='715,483,905,583'>
+<AREA HREF="JAVASCRIPT:var rep='PictureTabLkd32'; show_rep(rep);" alt='Оформление заказов' shape='rect' coords='455,338,645,438'>
+<AREA HREF="JAVASCRIPT:var rep='PictureTabLkd33'; show_rep(rep);" alt='Предоставление  информации  о ценах ' shape='rect' coords='220,193,410,293'>
+<AREA HREF="JAVASCRIPT:var rep='PictureTabLkd34'; show_rep(rep);" alt='Заказы клиентов' shape='rect' coords='975,370,1041,409'>
+<AREA HREF="JAVASCRIPT:var rep='PictureTabLkd35'; show_rep(rep);" alt='Запрос информации о ценах' shape='rect' coords='54,145,263,165'>
+<AREA HREF="JAVASCRIPT:var rep='PictureTabLkd36'; show_rep(rep);" alt='Заявки на заказ' shape='rect' coords='299,377,416,397'>
+<AREA HREF="JAVASCRIPT:var rep='PictureTabLkd37'; show_rep(rep);" alt='Звонки клиентов' shape='rect' coords='27,203,93,242'>
+<AREA HREF="JAVASCRIPT:var rep='PictureTabLkd38'; show_rep(rep);" alt='Маркетинговые материалы' shape='rect' coords='927,541,1043,580'>
+<AREA HREF="JAVASCRIPT:var rep='PictureTabLkd39'; show_rep(rep);" alt='Правила и процедуры' shape='rect' coords='601,105,683,144'>
+<AREA HREF="JAVASCRIPT:var rep='PictureTabLkd40'; show_rep(rep);" alt='Прогноз продаж' shape='rect' coords='955,498,1073,518'>
+<AREA HREF="JAVASCRIPT:var rep='PictureTabLkd41'; show_rep(rep);" alt='Результаты сборки и тестирования' shape='rect' coords='867,117,1020,156'>
+<AREA HREF="JAVASCRIPT:var rep='PictureTabLkd42'; show_rep(rep);" alt='Система оформления заказов' shape='rect' coords='376,638,538,677'>
+<AREA HREF="JAVASCRIPT:var rep='PictureTabLkd43'; show_rep(rep);" alt='Стандарты на продукцию' shape='rect' coords='311,121,497,141'>
+</MAP>
+</IMG>
+</P>
+</BODY>
+</HTML>

@@ -1,0 +1,41 @@
+<HTML>
+<HEAD>
+<TITLE>
+CA Report Template Builder - Untitled Document
+</TITLE>
+</HEAD>
+<BODY ONUNLOAD="close_winrep();">
+<SCRIPT>
+var win = null;
+function close_winrep()
+{
+ if (win && !win.closed)
+ {
+  win.close();
+ }
+}
+function show_rep(rep_pict)
+{
+ if (win && !win.closed)
+ {
+  win.frames[1].location.replace(rep_pict + "_2.htm");
+  win.focus();
+  return;
+ }
+ win = window.open(rep_pict + ".htm", "RTBViewReportPicture","titlebar=no,scrollbars=yes,top=0,left=0,resizable=yes,height=350,width=400");
+}
+</SCRIPT>
+<P><IMG src='images/diagram9.jpeg' usemap ='#mapdiagram'>
+<MAP name='mapdiagram'>
+<AREA HREF="JAVASCRIPT:var rep='PictureTabLkd117'; show_rep(rep);" alt='Инсалляция  дополнитеотного  программного обеспечения' shape='rect' coords='775,498,1050,603'>
+<AREA HREF="JAVASCRIPT:var rep='PictureTabLkd118'; show_rep(rep);" alt='Инсталляция  операционной системы' shape='rect' coords='785,178,990,303'>
+<AREA HREF="JAVASCRIPT:var rep='PictureTabLkd119'; show_rep(rep);" alt='Подготовка  компонентов' shape='rect' coords='105,193,255,293'>
+<AREA HREF="JAVASCRIPT:var rep='PictureTabLkd120'; show_rep(rep);" alt='Установка  материнской  платы и винчестера' shape='rect' coords='310,178,500,293'>
+<AREA HREF="JAVASCRIPT:var rep='PictureTabLkd121'; show_rep(rep);" alt='Установка флоппи-дисковода' shape='rect' coords='545,193,710,293'>
+<AREA HREF="JAVASCRIPT:var rep='PictureTabLkd122'; show_rep(rep);" alt='Програмное обеспечение' shape='rect' coords='655,348,815,453'>
+<AREA HREF="JAVASCRIPT:var rep='PictureTabLkd123'; show_rep(rep);" alt='Компоненты' shape='rect' coords='105,378,245,458'>
+</MAP>
+</IMG>
+</P>
+</BODY>
+</HTML>

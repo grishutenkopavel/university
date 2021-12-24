@@ -1,0 +1,51 @@
+<HTML>
+<HEAD>
+<TITLE>
+CA Report Template Builder - Untitled Document
+</TITLE>
+</HEAD>
+<BODY ONUNLOAD="close_winrep();">
+<SCRIPT>
+var win = null;
+function close_winrep()
+{
+ if (win && !win.closed)
+ {
+  win.close();
+ }
+}
+function show_rep(rep_pict)
+{
+ if (win && !win.closed)
+ {
+  win.frames[1].location.replace(rep_pict + "_2.htm");
+  win.focus();
+  return;
+ }
+ win = window.open(rep_pict + ".htm", "RTBViewReportPicture","titlebar=no,scrollbars=yes,top=0,left=0,resizable=yes,height=350,width=400");
+}
+</SCRIPT>
+<P><IMG src='images/diagram5.jpeg' usemap ='#mapdiagram'>
+<MAP name='mapdiagram'>
+<AREA HREF="JAVASCRIPT:var rep='PictureTabLkd74'; show_rep(rep);" alt='Инсталляция  дополнительного  программного обеспечения' shape='rect' coords='855,433,1070,533'>
+<AREA HREF="JAVASCRIPT:var rep='PictureTabLkd75'; show_rep(rep);" alt='Инсталляция  операционной системы' shape='rect' coords='895,133,1100,238'>
+<AREA HREF="JAVASCRIPT:var rep='PictureTabLkd76'; show_rep(rep);" alt='Подготовка  компонентов' shape='rect' coords='20,268,245,373'>
+<AREA HREF="JAVASCRIPT:var rep='PictureTabLkd77'; show_rep(rep);" alt='Результаты тестирования' shape='rect' coords='280,138,475,223'>
+<AREA HREF="JAVASCRIPT:var rep='PictureTabLkd78'; show_rep(rep);" alt='Тестипрование компьютеров' shape='rect' coords='255,573,480,653'>
+<AREA HREF="JAVASCRIPT:var rep='PictureTabLkd79'; show_rep(rep);" alt='Установка дисковода   CD-ROM' shape='rect' coords='615,398,785,493'>
+<AREA HREF="JAVASCRIPT:var rep='PictureTabLkd80'; show_rep(rep);" alt='Установка  материнской  платы и винчестера' shape='rect' coords='285,268,510,373'>
+<AREA HREF="JAVASCRIPT:var rep='PictureTabLkd81'; show_rep(rep);" alt='Установка модема' shape='rect' coords='600,168,780,238'>
+<AREA HREF="JAVASCRIPT:var rep='PictureTabLkd82'; show_rep(rep);" alt='Установка флоппи-дисковода' shape='rect' coords='610,278,780,373'>
+<AREA HREF="JAVASCRIPT:var rep='PictureTabLkd83'; show_rep(rep);" alt='Неисправные компоненты' shape='rect' coords='882,652,1075,672'>
+<AREA HREF="JAVASCRIPT:var rep='PictureTabLkd84'; show_rep(rep);" alt='Собраные компьютеры' shape='rect' coords='900,598,1075,618'>
+<AREA HREF="JAVASCRIPT:var rep='PictureTabLkd85'; show_rep(rep);" alt='Дополнительное програмное обеспечение ' shape='rect' coords='900,288,1080,368'>
+<AREA HREF="JAVASCRIPT:var rep='PictureTabLkd86'; show_rep(rep);" alt='Компоненты' shape='rect' coords='75,118,175,178'>
+<AREA HREF="JAVASCRIPT:var rep='PictureTabLkd87'; show_rep(rep);" alt='J2' shape='rect' coords='830,313,870,353'>
+<AREA HREF="JAVASCRIPT:var rep='PictureTabLkd88'; show_rep(rep);" alt='J3' shape='rect' coords='1060,378,1100,418'>
+<AREA HREF="JAVASCRIPT:var rep='PictureTabLkd89'; show_rep(rep);" alt='J1' shape='rect' coords='535,298,575,338'>
+<AREA HREF="JAVASCRIPT:var rep='PictureTabLkd90'; show_rep(rep);" alt='J4' shape='rect' coords='735,513,770,573'>
+</MAP>
+</IMG>
+</P>
+</BODY>
+</HTML>

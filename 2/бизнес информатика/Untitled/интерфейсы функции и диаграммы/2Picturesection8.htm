@@ -1,0 +1,40 @@
+<HTML>
+<HEAD>
+<TITLE>
+CA Report Template Builder - Untitled Document
+</TITLE>
+</HEAD>
+<BODY ONUNLOAD="close_winrep();">
+<SCRIPT>
+var win = null;
+function close_winrep()
+{
+ if (win && !win.closed)
+ {
+  win.close();
+ }
+}
+function show_rep(rep_pict)
+{
+ if (win && !win.closed)
+ {
+  win.frames[1].location.replace(rep_pict + "_2.htm");
+  win.focus();
+  return;
+ }
+ win = window.open(rep_pict + ".htm", "RTBViewReportPicture","titlebar=no,scrollbars=yes,top=0,left=0,resizable=yes,height=350,width=400");
+}
+</SCRIPT>
+<P><IMG src='images/diagram8.jpeg' usemap ='#mapdiagram'>
+<MAP name='mapdiagram'>
+<AREA HREF="JAVASCRIPT:var rep='PictureTabLkd111'; show_rep(rep);" alt='Отгрузка и получение' shape='rect' coords='730,478,960,608'>
+<AREA HREF="JAVASCRIPT:var rep='PictureTabLkd112'; show_rep(rep);" alt='Продажи и маркетинг' shape='rect' coords='190,213,420,343'>
+<AREA HREF="JAVASCRIPT:var rep='PictureTabLkd113'; show_rep(rep);" alt='Производство продукта ' shape='rect' coords='460,343,690,473'>
+<AREA HREF="JAVASCRIPT:var rep='PictureTabLkd114'; show_rep(rep);" alt='Заказы клиентов' shape='rect' coords='463,290,564,307'>
+<AREA HREF="JAVASCRIPT:var rep='PictureTabLkd115'; show_rep(rep);" alt='Результаты сборки и тестирования' shape='rect' coords='776,226,986,243'>
+<AREA HREF="JAVASCRIPT:var rep='PictureTabLkd116'; show_rep(rep);" alt='Собранные компьютеры' shape='rect' coords='754,395,900,412'>
+</MAP>
+</IMG>
+</P>
+</BODY>
+</HTML>
