@@ -1,0 +1,13 @@
+#include <stdio.h>
+
+void main()
+{
+    int integer=5, n=-8;
+    char character='5'; // символ указывается в ''
+    printf("character=%d\n", character); // выводит код символа '5'
+    printf("character=%c\n", character); // выводит символ '5'
+    printf("integer=%d\n", integer); // выводит число 5
+    printf("(integer=53)%c\n", integer=53); // выводит символ с кодом 53
+    printf("(„5\">5)=%d\n", '5'>5); // выводит 1, если код симвоа '5' больше 5, иначе выводит 0
+    printf("n=%o\n\n",n); // выводит восмеричное представление числа -8
+}

@@ -1,0 +1,20 @@
+#include "stdio.h"
+#include <conio.h>
+void main()
+{
+  int data, month, year;
+  char name[15], town[15];
+//ввод имени
+  printf("Как вас зовут?"); scanf("%s", name); 
+  printf("Укажите дату, месяц и год вашего рождения.\n");
+// ввод даты рождения в формате дата месяц год
+  printf("Дата (число): "); scanf("%d", &data);
+  printf("Месяц (номер): "); scanf("%d", &month); 
+  printf("Год: "); scanf("%d", &year);
+// ввод города в готором родился
+  printf("В каком городе родились?"); scanf("%s", &town); 
+  printf("Вот мы о Вас и узнали кое-что. А именно...\n");
+//вывод введенных пользователем значений
+  printf("Вас зовут %s. Вы родились в городе %s (%d.%d.%d)\n", name, town, data, month, year);
+  getch();
+}

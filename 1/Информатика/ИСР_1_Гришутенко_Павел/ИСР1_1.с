@@ -1,0 +1,12 @@
+/*
+программа выаодит значения переменных на экран
+*/
+#include <stdio.h>
+
+void main()
+{
+    unsigned int z1 = 12, z2 = 88, z3 = 32789; //в z3 без unsigned может быть переполнение
+    printf("z1=%d\n", z1);
+    printf("z2=%d\n", z2);
+    printf("z3=%d\n", z3);
+}

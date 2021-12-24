@@ -1,0 +1,10 @@
+#include <stdio.h>
+
+void main()
+{
+    float z1=2.5, z2=5.67;
+    double u1=2.5, u2=5.67;
+    printf("результат для типа float: %f\n", z1+z2); //вывод суммы типов float
+    printf("результат для типа double: %f\n", u1+u2);//вывод суммы типов double
+    printf("самый короткий результат: %g\n", u1+u2);//вывод суммы double без нулей
+}

@@ -1,0 +1,20 @@
+#include <stdio.h>
+#include <conio.h>
+void main()
+{
+  int t=3;
+  char b, m='R';
+  printf("\nВведите значение b: "); scanf("%c", &b);  //ввод переменной b
+  printf("m=%c\n", m);  // вывод переменной m
+  printf("Код символа %c равен %d\n", b, (int)b);  //преобразование типа из char в int и вывод
+  printf("Код символа %c равен %d\n", m, m);  //значения m выводятся в зависимости от формата
+  printf("t=%d\n", t);  // вывод t
+  printf("t+int(b)=%d\n", t+=(int)b); //преобразование типа из char в int для сложения с t
+  printf("Символ с кодом %d - это %c\n", t, (char)t); //преобразование типа из int в char
+  printf("Познакомимся с функциями getchar и putchar\n");
+  fflush(stdin); /*очистка буфера клавиатуры*/
+  printf("Введите символ: \n"); b=getchar();  //getchar считывает один символ
+  printf("Вот Ваш символ: "); putchar(b);  //putchar выводит символ
+  printf("\n");
+  getch();
+}
